@@ -5,11 +5,22 @@ from datetime import date
 
 st.set_page_config(page_title="Retirement Planner", layout="wide")
 
+st.title("📊 Welcome to Your Retirement & Investment Planner")
+st.markdown("This personalized tool helps you **project your future** and plan **financial freedom** with confidence.")
+st.image(
+    "https://providencefinancialinc.com/wp-content/uploads/2012/11/bigstock-Retirement-Ahead-8148597.jpg",
+    caption="Plan your retirement with peace of mind",
+    use_container_width=True
+)
+
 # Password gate
 password = st.text_input("Enter access password:", type="password")
 if password != "Rplan888$~":
     st.warning("Unauthorized. Please enter the correct password.")
     st.stop()
+
+st.success("Access granted.")
+st.write("---")
 
 # — CONFIGURATION —
 EXCEL_PATH = "PRO WEALTH LATEST  2025 INVEST PLAN TOOL.xlsx"
